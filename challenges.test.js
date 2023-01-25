@@ -3,15 +3,15 @@
 const stringLength = require('./stringLength');
 
 test('Returns number of strings if string is between 1-10', () => {
-  expect(stringLength("abc")).toBe(3);
+  expect(stringLength('abc')).toBe(3);
 });
 
 test('Throw error if string length is less than 1', () => {
-  expect(() => stringLength("")).toThrow(Error);
+  expect(() => stringLength('')).toThrow(Error);
 });
 
 test('Throw error if string length is greater than 10', () => {
-  expect(() => stringLength("abcdefghijklmno")).toThrow(Error);
+  expect(() => stringLength('abcdefghijklmno')).toThrow(Error);
 });
 
 // reverse string
@@ -40,4 +40,12 @@ describe('calculator', () => {
   test('multiply two numbers', () => {
     expect(calc.multiply(1, 5)).toBe(5);
   });
+});
+
+// capitalize string
+
+const capitalize = require('./capitalize');
+
+test('Return string with first letter capitalize', () => {
+  expect(capitalize('abc')).toBe('Abc');
 });
